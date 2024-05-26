@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:friendio/main.dart';
+import 'package:friendio/homeScreen.dart';
 
 class LogIn extends StatefulWidget {
   const LogIn({super.key, required this.title});
@@ -22,7 +23,9 @@ class _LogInState extends State<LogIn> {
           Text("Friendio", style: TextStyle(
             fontFamily: "ubuntu",
             fontWeight: FontWeight.bold,
-            fontSize: 95
+            fontSize: 95,
+           // shadows: [Shadow(blurRadius: 4, color: const Color.fromARGB(134, 0, 0, 0) )]
+            
           ),),
          /* Container(
             width: height/10,
@@ -77,6 +80,10 @@ class _LogInState extends State<LogIn> {
               , fontSize: 20, fontFamily: "ubuntu"))),
               onPressed: () {
                 print("tapped");
+                Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => HomeScreen()),
+            );
               },
               style: ButtonStyle(
                  backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
