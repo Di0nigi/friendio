@@ -1,3 +1,3 @@
 # friendio
 
-A fake social media to prank friends
+A social media proof of concept
