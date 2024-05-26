@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:friendio/loginScreen.dart';
+
+var width = 0.0;
+var height = 0.0;
 
 void main() {
   runApp(const MyApp());
@@ -10,34 +14,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    width = MediaQuery.of(context).size.width;
+    height = MediaQuery.of(context).size.height;
     return MaterialApp(
       title: 'Friendio',
-      
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-
-
-  
-
-  @override
-  Widget build(BuildContext context) {
-
-    return Scaffold(
-      
+      home: const LogIn(title: 'Friendio'),
     );
   }
 }
