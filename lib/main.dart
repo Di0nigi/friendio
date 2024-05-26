@@ -3,6 +3,9 @@ import 'package:friendio/loginScreen.dart';
 
 var width = 0.0;
 var height = 0.0;
+String logo = "assets\\friendioicon.png";
+
+List<Color> palette = [Color.fromARGB(255, 0, 0, 0)];
 
 void main() {
   runApp(const MyApp());

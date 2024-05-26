@@ -17,7 +17,23 @@ class _LogInState extends State<LogIn> {
       body: Container(
         child: Align(
           alignment: Alignment.center,
-        child: Column(mainAxisAlignment: MainAxisAlignment.center,crossAxisAlignment: CrossAxisAlignment.center,children: [
+        child: Column(mainAxisAlignment: MainAxisAlignment.start,crossAxisAlignment: CrossAxisAlignment.center,children: [
+          Padding(padding: EdgeInsets.all(70)),
+          Text("Friendio", style: TextStyle(
+            fontFamily: "ubuntu",
+            fontWeight: FontWeight.bold,
+            fontSize: 95
+          ),),
+         /* Container(
+            width: height/10,
+            height: height/10,
+            decoration: BoxDecoration( 
+              image: DecorationImage(
+                  image: AssetImage(logo),
+                  fit: BoxFit.fill,
+                ),),
+          ),*/
+          Padding(padding: EdgeInsets.all(50)),
           Container(
             width: width - 50,
             height: height / 20,
@@ -28,7 +44,7 @@ class _LogInState extends State<LogIn> {
               ),
             ),
           ),
-          Padding(padding: EdgeInsets.all(10)),
+          Padding(padding: EdgeInsets.all(20)),
           Container(
               width: width - 50,
               height: height / 20,
@@ -37,20 +53,39 @@ class _LogInState extends State<LogIn> {
                   labelText: 'password',
                   border: OutlineInputBorder(),
                 ),
-              )),
-          Padding(padding: EdgeInsets.all(10)),
+                
+              ),),
+          Padding(padding: EdgeInsets.all(20)),
           Container(
             width: width - 50,
             height: height / 20,
-            color: Colors.black,
-            child: GestureDetector(
+            /*decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Color.fromARGB(150, 0, 0, 0),
+                            blurRadius: 1,
+                            spreadRadius: 0.5,
+                          ),
+                        ],
+                        color: Color.fromARGB(255, 0, 0, 0),
+                        borderRadius: BorderRadius.all(Radius.circular(25))
+                        ),*/
+            child: ElevatedButton(
               child:Align(
                 alignment: Alignment.center,
               child: Text("log in", style: TextStyle( color: Colors.white
-              , fontSize: 20))),
-              onTap: () {
+              , fontSize: 20, fontFamily: "ubuntu"))),
+              onPressed: () {
                 print("tapped");
               },
+              style: ButtonStyle(
+                 backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
+                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(25.0),
+                ),
+              ),
+              ),
             ),
           )
         ]),
