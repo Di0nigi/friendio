@@ -1,3 +1,3 @@
 # friendio
 
-A social media proof of concept
+A proof of concept social media app

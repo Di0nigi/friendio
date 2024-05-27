@@ -3,6 +3,7 @@ import 'package:friendio/main.dart';
 import 'package:friendio/homeScreen.dart';
 
 String username = "";
+String password = "";
 
 class LogIn extends StatefulWidget {
   const LogIn({super.key});
@@ -13,6 +14,7 @@ class LogIn extends StatefulWidget {
 
 class _LogInState extends State<LogIn> {
   final userController = TextEditingController();
+  final passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,6 +63,7 @@ class _LogInState extends State<LogIn> {
                   child: TextField(
                     obscureText: true,
                     obscuringCharacter: "*",
+                    controller: passwordController,
                     decoration: InputDecoration(
                       labelText: 'password',
                       border: OutlineInputBorder(),
@@ -91,19 +94,24 @@ class _LogInState extends State<LogIn> {
                                 fontSize: 20,
                                 fontFamily: "ubuntu"))),
                     onPressed: () {
-                      username= userController.text;
+                      username = userController.text;
+                      password = passwordController.text;
+
                       print(username);
-                      Navigator.push(
+                      if ( username != "" && password != ""){
+                        Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => HomeScreen()),
                       );
+                      }
+                      
                     },
                     style: ButtonStyle(
                       backgroundColor:
                           MaterialStateProperty.all<Color>(Colors.black),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(25.0),
+                          borderRadius: BorderRadius.circular(8.0),
                         ),
                       ),
                     ),

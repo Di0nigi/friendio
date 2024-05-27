@@ -18,10 +18,31 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: Container(
         child: Column(mainAxisAlignment: MainAxisAlignment.end, children: [
+           Container(
+            width: width,
+            height: height-(height / 20),
+            color: const Color.fromARGB(255, 255, 255, 255),
+            child: Column(children: [
+              Padding(padding: EdgeInsets.all(10)),Row( mainAxisAlignment: MainAxisAlignment.end,
+              children: [ 
+              Text("Friendio", style: TextStyle( fontFamily: "ubuntu", fontWeight: FontWeight.bold ,fontSize: 20, color: Colors.black),) 
+              ,
+              Padding(padding: EdgeInsets.fromLTRB(0, 0, width-140, 0)),
+              IconButton(
+                    // Use the FluentIcons + name of the icon you want
+                    icon: Icon(FluentIcons.chat_16_filled),
+                    onPressed: () {
+                      print("Button pressed");
+                    }),],
+            )],),
+          ),
           Container(
+            decoration: BoxDecoration(
+               color: Color.fromARGB(255, 255, 255, 255),
+              border: Border.all(width: 0.1, color: const Color.fromARGB(102, 0, 0, 0))),
             width: width,
             height: height / 20,
-            color: Color.fromARGB(255, 255, 255, 255),
+           
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
