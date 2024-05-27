@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
     height = MediaQuery.of(context).size.height;
     return MaterialApp(
       title: 'Friendio',
-      home: const LogIn(title: 'Friendio'),
+      home: const LogIn(),
     );
   }
 }

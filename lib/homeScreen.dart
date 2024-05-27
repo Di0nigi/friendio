@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:friendio/main.dart';
+import 'package:friendio/loginScreen.dart';
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 
 class HomeScreen extends StatefulWidget {
